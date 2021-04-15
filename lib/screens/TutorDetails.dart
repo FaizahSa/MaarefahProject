@@ -258,7 +258,7 @@ class _MyTutorDetailsState extends State<MyTutorDetails> {
   }
 
   Widget sendreview(dynamic aa) {
-    if (aa != _cUser.name) {
+    if (aa != _cUser.uid) {
       return Form(
         key: _formKey,
         child: Column(
@@ -353,7 +353,7 @@ class _MyTutorDetailsState extends State<MyTutorDetails> {
             return Center(
                 child: const Text('There are no reviews on this tutor...'));
           }
-          
+
           return ListView.builder(
             itemCount: snapshot.data.docs.length,
             itemBuilder: (context, index) {
